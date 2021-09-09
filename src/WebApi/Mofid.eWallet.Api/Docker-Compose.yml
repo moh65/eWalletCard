@@ -9,7 +9,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
     volumes: 
-      - ./init5-mongo.js:/docker-entrypoint-initdb.d/init5-mongo.js:ro
+      - ./init6-mongo.js:/docker-entrypoint-initdb.d/init6-mongo.js:ro
     ports:
     - 27017:27017
     networks:
