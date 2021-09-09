@@ -1,0 +1,21 @@
+.conatiners.login {
+    height: 100vh !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.form.login{
+    text-align: right;
+  
+}
+
+.card.login{
+    max-width: 600px;
+    margin: auto;
+}
+
+.container{
+    text-align: center;
+   
+}

@@ -1,0 +1,15 @@
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Infra\bin\Debug\netcoreapp3.1\Mofid.eWallet.Infra.deps.json
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Infra\bin\Debug\netcoreapp3.1\Mofid.eWallet.Infra.dll
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Infra\bin\Debug\netcoreapp3.1\Mofid.eWallet.Infra.pdb
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Infra\bin\Debug\netcoreapp3.1\Mofid.eWallet.Entities.dll
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Infra\bin\Debug\netcoreapp3.1\Mofid.eWallet.Entities.pdb
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Infra\obj\Debug\netcoreapp3.1\Mofid.eWallet.Infra.csproj.AssemblyReference.cache
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Infra\obj\Debug\netcoreapp3.1\Mofid.eWallet.Infra.AssemblyInfoInputs.cache
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Infra\obj\Debug\netcoreapp3.1\Mofid.eWallet.Infra.AssemblyInfo.cs
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Infra\obj\Debug\netcoreapp3.1\Mofid.eWallet.Infra.csproj.CoreCompileInputs.cache
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Infra\obj\Debug\netcoreapp3.1\Mofid.eWallet.Infra.csproj.CopyComplete
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Infra\obj\Debug\netcoreapp3.1\Mofid.eWallet.Infra.dll
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Infra\obj\Debug\netcoreapp3.1\Mofid.eWallet.Infra.pdb
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Api\publish\Mofid.eWallet.Infra.deps.json
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Api\publish\Mofid.eWallet.Infra.dll
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Api\publish\Mofid.eWallet.Infra.pdb

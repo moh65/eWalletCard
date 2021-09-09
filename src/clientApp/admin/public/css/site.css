@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Dark-Sans';
+    src: url('../fonts/Dark-Sans.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'Dark-Sans';
+    src: url('../fonts/Dark-Sans.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Dark-Sans';
+    src: url('../fonts/Dark-Sans.woff') format('woff');
+}
+body {
+   min-height: 100vh;
+    font-family: Dark-Sans !important;
+    font-size: 12px  !important;
+    line-height: 30px  !important;
+    
+}
+
+.justifyContent{
+    justify-content: space-between !important;
+    padding-left: 20px !important;
+    padding-right: 10px !important;
+    
+}
+
+.full-body {
+    min-height: 85vh;
+    margin-top: 10px;
+}
+
+footer{
+    bottom: 0px;
+    background: #f8f9fa;
+    padding: 18px;
+    position: relative;
+}
+.card-header{
+    text-align: right;
+}
+
+.text-right .col-md-4{
+    text-align: right;
+}

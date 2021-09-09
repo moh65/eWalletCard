@@ -1,0 +1,8 @@
+.contract-text{
+    min-height: 67vh;
+    width: 100%;
+    text-align: right;
+    font-size: 10px;
+    background: #e9ecef;
+    border-radius: 5px;
+}

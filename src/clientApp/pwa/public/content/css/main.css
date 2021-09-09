@@ -1,0 +1,58 @@
+body {
+    min-height: 100vh;
+    font-size: 0.8rem;
+    overflow-x: hidden !important;
+}
+
+#root{
+    overflow-x: hidden !important;
+}
+
+.card{
+    width: 100%;
+}
+
+.container {
+    min-height: 100vh !important;
+    max-width: 500px;
+}
+
+.center-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'Dark-Sans';
+    src: url('../fonts/Dark-Sans.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'Dark-Sans';
+    src: url('../fonts/Dark-Sans.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Dark-Sans';
+    src: url('../fonts/Dark-Sans.woff') format('woff');
+}
+
+*{
+    font-family: "Dark-Sans" !important;
+}
+
+.btn-primary {
+    font-size: 10px;
+}
+a{
+    text-decoration: none;
+}
+
+.mofid-color{
+    color: #00afb9
+}
+
+.mofid-input {
+    background: #dee2e6;
+}

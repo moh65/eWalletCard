@@ -1,0 +1,84 @@
+version: "3.2"
+services:
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    volumes: 
+      - ./init5-mongo.js:/docker-entrypoint-initdb.d/init5-mongo.js:ro
+    ports:
+    - 27017:27017
+    networks:
+    - elastic
+
+  mofid_wallet:
+    image: mofid_wallet
+    container_name: mofid_wallet
+    networks:
+      - elastic
+    ports:
+      - 5000:80
+    environment:
+      - ASPNETCORE_ENVIRONMENT=loadtest
+      - MongoDatabaseConnection:ConnectionString=mongodb://root:root@mongo:27017
+  mofid_wallet_admin:
+    image: mofid_wallet_admin
+    container_name: mofid_wallet_admin
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000/
+      - REACT_APP_API_USERNAME=m.parsa
+      - REACT_APP_API_PASSWORD=123456
+    networks:
+      - elastic
+    ports:
+      - 3001:3000
+
+  mofid_wallet_pwa:
+    image: mofid_wallet_pwa
+    container_name: mofid_wallet_pwa
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000/
+      - REACT_APP_API_USERNAME=m.parsa
+      - REACT_APP_API_PASSWORD=123456
+    networks:
+      - elastic
+    ports:
+     - 3002:3000
+  #elasticsearch:
+  # container_name: elasticsearch
+  # image: elasticsearch:7.9.1
+  # ports:
+  #  - 9200:9200
+  # volumes:
+  #  - elasticsearch-data:/usr/share/elasticsearch/data
+  # environment:
+  #  - xpack.monitoring.enabled=true
+  #  - xpack.watcher.enabled=false
+  #  - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+  #  - discovery.type=single-node
+  # networks:
+  #  - elastic
+
+  #kibana:
+  # container_name: kibana
+  # image: kibana:7.9.1
+  # ports:
+  #  - 5601:5601
+  # depends_on:
+  #  - elasticsearch
+  # environment:
+  #  - ELASTICSEARCH_URL=http://localhost:9200
+  # networks:
+  #  - elastic
+
+networks:
+  elastic:
+    driver: bridge
+
+volumes:
+  elasticsearch-data:
+  mongo-data:

@@ -1,0 +1,17 @@
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Application\bin\Debug\netcoreapp3.1\Mofid.eWallet.Application.deps.json
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Application\bin\Debug\netcoreapp3.1\Mofid.eWallet.Application.dll
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Application\bin\Debug\netcoreapp3.1\Mofid.eWallet.Application.pdb
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Application\bin\Debug\netcoreapp3.1\Mofid.eWallet.Entities.dll
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Application\bin\Debug\netcoreapp3.1\Mofid.eWallet.Infra.dll
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Application\bin\Debug\netcoreapp3.1\Mofid.eWallet.Entities.pdb
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Application\bin\Debug\netcoreapp3.1\Mofid.eWallet.Infra.pdb
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Application\obj\Debug\netcoreapp3.1\Mofid.eWallet.Application.csproj.AssemblyReference.cache
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Application\obj\Debug\netcoreapp3.1\Mofid.eWallet.Application.AssemblyInfoInputs.cache
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Application\obj\Debug\netcoreapp3.1\Mofid.eWallet.Application.AssemblyInfo.cs
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Application\obj\Debug\netcoreapp3.1\Mofid.eWallet.Application.csproj.CoreCompileInputs.cache
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Application\obj\Debug\netcoreapp3.1\Mofid.eWallet.Application.csproj.CopyComplete
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Application\obj\Debug\netcoreapp3.1\Mofid.eWallet.Application.dll
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Application\obj\Debug\netcoreapp3.1\Mofid.eWallet.Application.pdb
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Api\publish\Mofid.eWallet.Application.deps.json
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Api\publish\Mofid.eWallet.Application.dll
+E:\projects\wallet\walletgit2\src\WebApi\Mofid.eWallet.Api\publish\Mofid.eWallet.Application.pdb

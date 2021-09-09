@@ -1,0 +1,587 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mofid.eWallet.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Mofid.eWallet.Api.Controllers.CardController.Register(Mofid.eWallet.Api.RequestModels.CardRegisterRequest)">
+            <summary>
+             که ثبت نام مشتری برای دریافت مفید کارت
+            مشتری باید قبلا در tbs ثبت نام شده باشد.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /register
+                {
+                   "nationalCode": "1234567890",
+                   "phoneNumber": "09123456789",
+                }
+                
+            </remarks>
+            <param name="request"></param>
+            <returns></returns>
+            <response code="200">Returns the success message("card otp sent successfuly")</response>
+            <response code="500">If ocure any error</response>      
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.CardController.Activate(Mofid.eWallet.Api.RequestModels.CardActivateRequest)">
+            <summary>
+            فعال سازی کارت با شماره کارت بانکی 
+            برای کاربر باید قبلا درخواست مفید کارت ثبت شده باشد.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /activate
+                {
+                   "nationalCode": "112344124",
+                   "phoneNumber": "09123456789",
+                   "pan":"1234567890123456"
+                }
+                
+            </remarks>
+            <param name="request"></param>
+            <returns></returns>
+            <response code="200">Returns the success message("client verified successfully")</response>
+            <response code="500">If ocure any error</response>      
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.CardController.VerifyActivate(Mofid.eWallet.Api.RequestModels.VerifyCardActivateRequest)">
+            <summary>
+            فعال سازی کارت با رمز یکبار مصرف ارسال شده به کاربر و شماره کارت بانکی
+            برای کاربر باید قبلا درخواست مفید کارت ثبت شده باشد.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /verifyactivate
+                {
+                   "nationalCode": "112344124",
+                   "phoneNumber": "09123456789",
+                   "otp":"123456"
+                }
+                
+            </remarks>
+            <param name="request"></param>
+            <returns></returns>
+            <response code="200">Returns the success message("client verified successfully")</response>
+            <response code="500">If ocure any error</response>      
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.ClientController.Kyc(Mofid.eWallet.Api.RequestModels.KycRequest)">
+            <summary>
+            ثبت نام مشتری برای دریافت مفید کارت.
+            مشتری باید قبلا در tbs ثبت نام شده باشد.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /kyc
+                {
+                   "nationalCode": "1234567890",
+                   "nationalCardSerial": "1234567",
+                   "phoneNumber": "09123456789",
+                   "deviceId": "112344124",
+                   "postalCode": "1234567891",
+                   "address": "تهران..."
+                }
+                
+            </remarks>
+            <param name="request"></param>
+            <returns></returns>
+            <response code="200">Returns the success message("otp sent successfuly")</response>
+            <response code="500">If ocure any error</response>      
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.ClientController.Verify(Mofid.eWallet.Api.RequestModels.VerifyRequest)">
+            <summary>
+            اعتبار سنجی شماره رمز یکبار مصرف ارسال شده به مشتری
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /verify
+                {
+                   "deviceId": "112344124",
+                   "phoneNumber": "09123456789",
+                   "otp":"123456"
+                }
+                
+            </remarks>
+            <param name="request"></param>
+            <returns></returns>
+            <response code="200">Returns the success message("client verified successfully")</response>
+            <response code="500">If ocure any error</response>      
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.ClientController.Address(Mofid.eWallet.Api.RequestModels.AddressClientRequest)">
+            <summary>
+            دریافت اطلاعات آدرس و کد پستی مشتری از کد ملی
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <remarks>
+            Sample request:
+            
+                GET /Details
+                {
+                   "nationalCode": "nationalCode",
+                }
+                
+            </remarks>
+            <response code="200">Returns data { address  : *** , nationalCode: *** , addressCity : **** }</response>
+            <response code="404">national code not in tbs</response>
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.ClientController.PhysicalVerify(Mofid.eWallet.Api.RequestModels.PhysicalVerifyRequest)">
+            <summary>
+            تایید فیزیکی برای دریافت کارت
+            بعد از ثبت نام کاربر و پرداخت هزینه فراخوانی میشود.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /physicalVerify
+                {
+                   "nationalCode": "1234567890"
+                }
+                
+            </remarks>
+            <param name="request"></param>
+            <returns></returns>
+            <response code="200">Returns the success message("client physicaly verified successfully")</response>
+            <response code="500">If ocure any error</response>      
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.ClientController.TbsRemain(Mofid.eWallet.Api.RequestModels.TbsRemainsRequest)">
+            <summary>
+            دریافت مانده حساب از tbs
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <remarks>
+            Sample request:
+            
+                GET /TbsRemain?nationalCode=**********
+                
+            </remarks>
+            <response code="200"> Returns data { remain  : *** } </response>
+            <response code="500">If ocure any error</response>   
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.ClientController.BankRemain(Mofid.eWallet.Api.RequestModels.BankRemainsRequest)">
+            <summary>
+            دریافت مانده حساب از بانک
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <remarks>
+            Sample request:
+            
+                GET /BankRemain?nationalCode=**********
+                
+            </remarks>
+            <response code="200"> Returns data { remain  : *** } </response>
+            <response code="500">If ocure any error</response>   
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.ClientController.IsLegal(Mofid.eWallet.Api.RequestModels.WhiteListRequest)">
+            <summary>
+            چک کردن کاربر در whitelist جهت پیغام مفید کارت
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <remarks>
+            Sample request:
+            
+                GET /IsLegal?nationalCode=1234567890
+                
+            </remarks>
+            <response code="200"> Returns data true or falsee </response>
+            <response code="500">If ocure any error</response>   
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.ClientController.ClientStates(Mofid.eWallet.Api.RequestModels.ClientStatesRequest)">
+            <summary>
+            دریافت وضعیت فرایند صدور کارت برای مشتری
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /clientStates
+                {
+                   "nationalCode": "1234567890"
+                }
+                
+            </remarks>
+            <param name="request"></param>
+            <returns></returns>
+            <response code="200">Returns the client's states</response>
+            <response code="500">If ocure any error</response>      
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.ClientController.list(Mofid.eWallet.Api.RequestModels.ClientListRequest)">
+            <summary>
+            لیست مشتریان
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /list
+                {
+                   "nationalCode": "",
+                   "mobile": ""
+                   "skip": "0"
+                   "skip": "20"
+                }
+                
+            </remarks>
+            <param name="request"></param>
+            <returns></returns>
+            <response code="200">Returns clients</response>
+            <response code="500">If ocure any error</response>      
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.ClientController.info(Mofid.eWallet.Api.RequestModels.ClientInfoRequest)">
+            <summary>
+            اطلاعات مشتری
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /info
+                {
+                   "nationalCode": "",
+                }
+                
+            </remarks>
+            <param name="request"></param>
+            <returns></returns>
+            <response code="200">Returns client's info</response>
+            <response code="500">If ocure any error</response>      
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.LogController.List(Mofid.eWallet.Api.RequestModels.LogListRequest)">
+            <summary>
+            دریافت اطلاعات لاگ ها
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /list
+                {
+                   "skip": "0"
+                   "take": "20"
+                }
+                
+            </remarks>
+            <param name="request"></param>
+            <returns></returns>
+            <response code="200">Returns the pod logs</response>
+            <response code="500">If ocure any error</response>      
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.PaymentController.TbsToCard(Mofid.eWallet.Api.DTOs.TbsToCardRequest)">
+            <summary>
+            ورود و دریافت توکن 
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /TbsToCard
+                {
+                   "nationalCode": "1234567890" ,
+                   "amount": "100000" ریال,
+                }
+                
+            </remarks>
+            <param name="transfer"></param>
+            <returns></returns>
+            <response code="200">Returns the success message("successfully trnasfered.")</response>
+            <response code="401">If wrong username and password</response>
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.PaymentController.CardToTbs(Mofid.eWallet.Api.DTOs.TbsToCardRequest)">
+            <summary>
+            انتقال وجه از کارت به کارگزاری 
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /CardToTbs
+                {
+                   "nationalCode": "1234567890" ,
+                   "amount": "100000" ریال,
+                }
+                
+            </remarks>
+            <param name="transfer"></param>
+            <returns></returns>
+            <response code="200">Returns the success message("successfully trnasfered.")</response>
+            <response code="401">If wrong username and password</response>
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.TemporaryClientController.ImportExcel(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            import whitelist از اکسل
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /ImportExcel
+                {
+                   "WhiteList": "file binary",
+                }
+                
+            </remarks>
+            <param name="WhiteList"> فایل اکسل </param>
+            <returns></returns>
+            <response code="200">Returns the success message("clients have been imported Successfully")</response>
+            <response code="500">If ocure any error</response>      
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.TemporaryClientController.List(Mofid.eWallet.Api.RequestModels.ClientListRequest)">
+             <summary>
+            لیست کاربران وایت لیست
+             </summary>
+             <remarks>
+             Sample request:
+             
+            	    GET /List    
+             </remarks>
+             <param name="request"></param>
+             <returns></returns>
+             <response code="200">Returns the success message("clients have been imported Successfully")</response>
+             <response code="500">If ocure any error</response>      
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.TemporaryClientController.Delete(Mofid.eWallet.Api.RequestModels.ClientDeleteRequest)">
+            <summary>
+            حذف کاربر
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /List    
+            </remarks>
+            <param name="request"></param>
+            <returns></returns>
+            <response code="200">Returns the success message("clients have been imported Successfully")</response>
+            <response code="500">If ocure any error</response>      
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.TokenController.Acquire(Mofid.eWallet.Api.RequestModels.AcquireRequest)">
+            <summary>
+            دریافت access token
+            برای فراخوانی باید قبلا لاگین کرده باشید
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /token
+                {
+                   "phoneNumber": "09123456789",
+                   "deviceId": "112344124",
+                }
+                
+            </remarks>
+            <param name="acquire"></param>
+            <returns></returns>
+            <response code="200">retrun the access token string</response>
+            <response code="500">if ocure any internal error</response>
+            <response code="401">unauthorize</response>      
+        </member>
+        <member name="M:Mofid.eWallet.Api.Controllers.UserController.Authenticate(Mofid.eWallet.Api.DTOs.UserRequest)">
+            <summary>
+            ورود و دریافت توکن 
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /auth
+                {
+                   "username": "username",
+                   "password": "password",
+                }
+                
+            </remarks>
+            <param name="userInfo"></param>
+            <returns></returns>
+            <response code="200">Returns the success message("user logged in successfully")</response>
+            <response code="401">If wrong username and password</response>
+        </member>
+        <member name="T:Mofid.eWallet.Api.Properties.ExceptionErrorCodeMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.Properties.ExceptionErrorCodeMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.Properties.ExceptionErrorCodeMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.Properties.ExceptionErrorCodeMessages._101">
+            <summary>
+              Looks up a localized string similar to token is null.
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.AcquireRequest.PhoneNumber">
+            <summary>
+            شماره تماس
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.AcquireRequest.DeviceId">
+            <summary>
+            شناسه دستگاه
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.AddressClientRequest.NationalCode">
+            <summary>
+            کد ملی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.BankRemainsRequest.NationalCode">
+            <summary>
+            کد ملی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.BankRemainsRequest.DeviceId">
+            <summary>
+            شماره دستگاه
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.CardActivateRequest.NationalCode">
+            <summary>
+            کد ملی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.CardActivateRequest.PhoneNumber">
+            <summary>
+            شماره موبایل
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.CardActivateRequest.Pan">
+            <summary>
+            شماره کارت
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.CardRegisterRequest.NationalCode">
+            <summary>
+            کد ملی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.CardRegisterRequest.PhoneNumber">
+            <summary>
+            شماره موبایل
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.ClientStatesRequest.NationalCode">
+            <summary>
+            کد ملی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.KycRequest.NationalCode">
+            <summary>
+            کد ملی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.KycRequest.NationalCardSerial">
+            <summary>
+            شماره سریال کارت ملی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.KycRequest.PhoneNumber">
+            <summary>
+            شماره موبایل
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.KycRequest.DeviceId">
+            <summary>
+            شماره دستگاه
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.KycRequest.PostalCode">
+            <summary>
+            کد پستی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.KycRequest.AddressString">
+            <summary>
+            آدرس پستی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.KycRequest.BirthDate">
+            <summary>
+            تاریخ تولد
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.LogListRequest.Skip">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.LogListRequest.Take">
+            <summary>
+            تعداد رکورد های بازگشتی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.LogListRequest.NationalCode">
+            <summary>
+            کد ملی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.PhysicalVerifyRequest.NationalCode">
+            <summary>
+            کد ملی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.TbsRemainsRequest.NationalCode">
+            <summary>
+            کد ملی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.VerifyCardActivateRequest.NationalCode">
+            <summary>
+            کد ملی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.VerifyCardActivateRequest.PhoneNumber">
+            <summary>
+            شماره موبایل
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.VerifyCardActivateRequest.Otp">
+            <summary>
+            کد ارسالی به تلفن
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.VerifyRequest.DeviceId">
+            <summary>
+            شماره دستگاه
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.VerifyRequest.PhoneNumber">
+            <summary>
+            شماره موبایل
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.VerifyRequest.Otp">
+            <summary>
+            کد رمز یکبار مصرف
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.RequestModels.WhiteListRequest.NationalCode">
+            <summary>
+            کد ملی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.DTOs.TbsToCardRequest.NationalCode">
+            <summary>
+            کد ملی
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.DTOs.TbsToCardRequest.Amount">
+            <summary>
+            مبلغ مورد نظر جهت انقال از tbs به مفید کارت
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.DTOs.UserRequest.Username">
+            <summary>
+            نام کاربری
+            </summary>
+        </member>
+        <member name="P:Mofid.eWallet.Api.DTOs.UserRequest.Password">
+            <summary>
+            رمز عبور
+            </summary>
+        </member>
+    </members>
+</doc>

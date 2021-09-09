@@ -1,0 +1,283 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Application\\Mofid.eWallet.Application.csproj": {}
+  },
+  "projects": {
+    "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Application\\Mofid.eWallet.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Application\\Mofid.eWallet.Application.csproj",
+        "projectName": "Mofid.eWallet.Application",
+        "projectPath": "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Application\\Mofid.eWallet.Application.csproj",
+        "packagesPath": "C:\\Users\\mcpar\\.nuget\\packages\\",
+        "outputPath": "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mcpar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Entities\\Mofid.eWallet.Entities.csproj": {
+                "projectPath": "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Entities\\Mofid.eWallet.Entities.csproj"
+              },
+              "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Infra\\Mofid.eWallet.Infra.csproj": {
+                "projectPath": "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Infra\\Mofid.eWallet.Infra.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Entities\\Mofid.eWallet.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Entities\\Mofid.eWallet.Entities.csproj",
+        "projectName": "Mofid.eWallet.Entities",
+        "projectPath": "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Entities\\Mofid.eWallet.Entities.csproj",
+        "packagesPath": "C:\\Users\\mcpar\\.nuget\\packages\\",
+        "outputPath": "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mcpar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.10.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Infra\\Mofid.eWallet.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Infra\\Mofid.eWallet.Infra.csproj",
+        "projectName": "Mofid.eWallet.Infra",
+        "projectPath": "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Infra\\Mofid.eWallet.Infra.csproj",
+        "packagesPath": "C:\\Users\\mcpar\\.nuget\\packages\\",
+        "outputPath": "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mcpar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Entities\\Mofid.eWallet.Entities.csproj": {
+                "projectPath": "E:\\projects\\wallet\\walletgit2\\src\\WebApi\\Mofid.eWallet.Entities\\Mofid.eWallet.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Caching.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.9.0, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "RestEase": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

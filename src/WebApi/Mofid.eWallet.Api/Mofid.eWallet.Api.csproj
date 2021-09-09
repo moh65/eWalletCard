@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>c20f30f0-5d72-4e34-bcea-4dc2dc0ab35b</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Middlewares\ResponseWrapper\**" />
+    <Compile Remove="publish\**" />
+    <Content Remove="Middlewares\ResponseWrapper\**" />
+    <Content Remove="publish\**" />
+    <EmbeddedResource Remove="Middlewares\ResponseWrapper\**" />
+    <EmbeddedResource Remove="publish\**" />
+    <None Remove="Middlewares\ResponseWrapper\**" />
+    <None Remove="publish\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCoreRateLimit" Version="3.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="4.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="NLog.Targets.ElasticSearch" Version="7.5.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.10.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mofid.eWallet.BO.tbs\Mofid.eWallet.BO.Tbs.csproj" />
+    <ProjectReference Include="..\Mofid.eWallet.Db.Mongo\Mofid.eWallet.Db.Mongo.csproj" />
+    <ProjectReference Include="..\Mofid.eWallet.Entities\Mofid.eWallet.Entities.csproj" />
+    <ProjectReference Include="..\Mofid.eWallet.Infra\Mofid.eWallet.Infra.csproj" />
+    <ProjectReference Include="..\Mofid.eWallet.Moq\Mofid.eWallet.Moq.csproj" />
+    <ProjectReference Include="..\Mofid.eWallet.PasargadWallet\Mofid.eWallet.PasargadWallet.csproj" />
+    <ProjectReference Include="..\Mofid.eWallet.Services\Mofid.eWallet.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\ExceptionErrorCodeMessages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ExceptionErrorCodeMessages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\ExceptionErrorCodeMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExceptionErrorCodeMessages.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="scripts\build_for_container\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+
+</Project>

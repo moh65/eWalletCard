@@ -1,0 +1,107 @@
+.tbs-container{
+    background: #1d3557 ;
+    color: white;
+    padding: 10px;
+}
+
+
+#timeline-content {
+    margin-top: 50px;
+    text-align: center;
+}
+/* Timeline */
+.timeline {
+    color: black;
+    border-right: 4px solid #e5e5e5;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    background: rgba(255, 255, 255, 0.03);
+
+    font-family: "Chivo", sans-serif;
+    margin: 50px auto;
+    letter-spacing: 0.5px;
+    position: relative;
+    line-height: 1.4em;
+    font-size: 1.03em;
+    padding: 0 0;
+    list-style: none;
+    text-align: left;
+    font-weight: 100;
+    max-width: 80%;
+}
+.timeline h1 {
+    font-family: "Saira", sans-serif;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+    font-size: 1.4em;
+}
+.timeline h2,
+.timeline h3 {
+    font-family: "Saira", sans-serif;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    font-size: 1.4em;
+}
+.timeline .event {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-bottom: 25px;
+
+    position: relative;
+
+    text-align: right;
+    padding-right: 13px;
+}
+
+.timeline .event p{
+    font-size: 8px;
+}
+
+.timeline .event:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+}
+.timeline .event:before,
+.timeline .event:after {
+    position: absolute;
+    display: block;
+    top: 0;
+}
+.timeline .event:before {
+    left: -217.5px;
+    color: rgba(255, 255, 255, 0.4);
+    content: attr(data-date);
+    text-align: right;
+    font-weight: 100;
+    font-size: 0.9em;
+    min-width: 120px;
+    font-family: "Saira", sans-serif;
+}
+.timeline .event:after {
+    box-shadow: 0 0 0 4px green;
+    right:-7.85px;
+    background: green;
+    border-radius: 50%;
+    height: 11px;
+    width: 11px;
+    content: "";
+    top: 5px;
+}
+
+.timeline .event:last-child:after {
+    box-shadow: 0 0 0 4px orange !important;
+    right:-7.85px;
+    background: orange !important;
+    border-radius: 50%;
+    height: 11px;
+    width: 11px;
+    content: "";
+    top: 5px;
+}
+
+.installButton {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+}

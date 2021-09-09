@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="moq" Version="4.14.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mofid.eWallet.Entities\Mofid.eWallet.Entities.csproj" />
+    <ProjectReference Include="..\Mofid.eWallet.services\Mofid.eWallet.Services.csproj" />
+  </ItemGroup>
+
+</Project>

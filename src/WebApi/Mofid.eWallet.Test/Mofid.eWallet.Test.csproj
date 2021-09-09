@@ -1,0 +1,82 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.Development.json" />
+    <None Remove="appsettings.json" />
+    <None Remove="appsettings.loadtest.json" />
+    <None Remove="appsettings.Stage.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.Development.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="appsettings.loadtest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="appsettings.Stage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Abstractions" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Composite" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Physical" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.FileSystemGlobbing" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.EventLog" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.EventSource" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.TraceSource" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Options.DataAnnotations" Version="3.1.10" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" Version="3.1.10" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    <PackageReference Include="coverlet.collector" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mofid.eWallet.Api\Mofid.eWallet.Api.csproj" />
+  </ItemGroup>
+
+</Project>
